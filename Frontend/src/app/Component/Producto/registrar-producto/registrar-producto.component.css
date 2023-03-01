@@ -1,0 +1,85 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+}
+
+.form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3, label, input, button {
+    margin: 8px 0;
+}
+
+label {
+    font-size: 1em;
+}
+
+h3 {
+    text-align: center;
+    
+}
+
+input {
+    margin: 25px 0px;
+    padding: 20px 15px;
+    color: var(--text-color);
+    border-radius: 0;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 1px solid #000;
+    border-image: initial;
+    text-align: left;
+}
+
+input:focus {
+    box-shadow: 0 0 10px #0000002a;
+    background-color: #0000002a;
+}
+
+button {
+    background-image: linear-gradient(to right, #00bfff , #2480f0, #26206e);
+    border-radius: 30px;
+    border: transparent;
+    width: 200px;
+    transition: .2s all ease;
+}
+
+button:hover {
+    background-image: linear-gradient(to right, #37cdff , #52a0ff, #4940b0);
+}
+
+select {
+    margin: 25px 0px;
+    padding: 5px 1px;
+    color: var(--text-color);
+    border-radius: 0;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    background-color: transparent;
+    text-align: left;
+    outline: none;
+    width: 234px;
+}
+
+option {
+    color: #000000;
+}
+
+@media(min-width:850px) {
+    select {
+        width: 450px;
+    }
+}

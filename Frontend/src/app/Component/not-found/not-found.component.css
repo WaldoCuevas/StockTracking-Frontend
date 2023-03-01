@@ -1,0 +1,31 @@
+.img {
+    background-image: url('../../img/404-error.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90vw;
+    height: 20vh;
+    max-width: 450px;
+    max-height: 250px;
+}
+
+.container {
+    text-align: center;
+    background-color: transparent;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+p {
+    font-size: 15px;
+}
+
+@media(min-width:850px){
+    p {
+        font-size: 25px;
+    }
+}

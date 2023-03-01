@@ -1,0 +1,25 @@
+<div class="table-container">
+  <h2>Lista de Productos</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Cantidad</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let producto of productos">
+
+        <td *ngIf="producto.estado"> {{ producto.nombre }}</td>
+        <td *ngIf="producto.estado"> {{ producto.cantidad }}</td>
+        <td *ngIf="producto.estado">
+          <i (click)="actualizarProducto(producto.id)" class="fa-solid fa-pen" *ngIf="isAdmin"></i>
+          <i (click)="eliminarProducto(producto.id)" class="fa-solid fa-trash-can" *ngIf="isAdmin"></i>
+          <i (click)="verDetallesProducto(producto.id)" class="fa-solid fa-circle-info"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

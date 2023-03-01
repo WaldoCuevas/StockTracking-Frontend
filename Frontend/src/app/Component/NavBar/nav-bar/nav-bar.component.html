@@ -1,0 +1,21 @@
+<h1 class="title"><a routerLink="index" routerLinkActive="active">StockTracking</a></h1>
+
+<input type="checkbox" id="check">
+<label for="check" class="checkbtn">
+  <i class="fa-solid fa-bars"></i>
+</label>
+
+<nav class="navbar">
+  <a *ngIf="isLogged" class="link" routerLink="lista-productos" routerLinkActive="active">Lista de Productos</a>
+  <a *ngIf="isAdmin" class="link" routerLink="registrar-producto" routerLinkActive="active">Añadir Producto</a>
+  <a *ngIf="isLogged" class="link" (click)="getUserName(nombreUsuario)" routerLink="perfil-usuario/{nombreUsuario}"
+    routerLinkActive="active">Perfil</a>
+
+  
+  <a *ngIf="isLogin();else IniciarSesion" class="link" (click)="cerrarSesion()">Cerrar Sesión</a>
+
+  <ng-template #IniciarSesion>
+    <a class="link" routerLink="iniciar-sesion" routerLinkActive="active">Iniciar Sesión</a>
+  </ng-template>
+
+</nav>
